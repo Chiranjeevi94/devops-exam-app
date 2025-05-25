@@ -5,12 +5,13 @@ pipeline {
 
     environment {
         DOCKER_IMAGE = "chiranjeevi94/devopsexamapp:latest"
+        SCANNER_HOME = tool'sonar-scanner'
     }
 
     stages {
         stage('Git Checkout') {
             steps {
-                git url: 'https://github.com/KastroVKiran/devops-exam-app.git', 
+                git url: 'https://github.com/Chiranjeevi94/devops-exam-app.git', 
                     branch: 'master'
             }
         }
